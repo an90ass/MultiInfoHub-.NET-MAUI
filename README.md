@@ -1,1 +1,11 @@
 # GORSEL-PROGRAMLAMA-ODEV2
+![1](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/40f674b8-d77d-4046-9d6b-0772db541992)
+![2](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/5da4e86e-1699-43b8-bb43-c96bad2c2927)
+![3](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/427e6c98-0c72-4322-88d1-832559731bce)
+![4](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/6f37e965-b6e8-4b1f-bc3f-ced42676cb87)
+![5](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/58fd3661-6c9e-4d9f-bc71-4c0a7fe4a40c)
+![6](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/41970be2-c01a-4541-8e76-518e079e4448)
+![WhatsApp Image 2024-01-06 at 1 16 12 PM](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/0a06e5a5-a0b0-482d-bc8f-203598e10a07)
+![WhatsApp Image 2024-01-06 at 1 16 12 PM (1)](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/07d031e4-7401-462d-90e4-a8670dacc73b)
+![WhatsApp Image 2024-01-06 at 1 16 12 PM (2)](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/613a5724-9769-41d9-8261-1486f333ffa8)
+![8](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/132a47e5-beb3-4cf6-b8cf-5fc9c80caeab)
