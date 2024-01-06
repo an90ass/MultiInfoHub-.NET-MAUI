@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="finalProject.Planlama"
+             Title="Planlama">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="refresh.png" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <VerticalStackLayout Padding="20"  >
+            <Frame  Background="#04364A" CornerRadius="40"
+>
+                <Label Text="Yapılacaklar"
+               FontSize="30"
+               TextColor="White"
+               HorizontalOptions="Start"/>
+            </Frame>
+            <Frame BackgroundColor="#04364A" CornerRadius="40" >
+                <VerticalStackLayout Spacing="25">
+
+                    <Label
+                FontSize="Small"
+                Text="Başlık :"
+                HorizontalOptions="Start"
+                TextColor="White"/>
+                    <Entry  x:Name="Bas"
+                        Placeholder="Başlık buraya yazınız.."
+            FontSize="Medium"
+            Text=""
+                    TextColor="White"
+                        />
+                    <Label
+            TextColor="White"
+            FontSize="Small"
+            Text=" Detay :"
+            HorizontalOptions="Start"/>
+                    <Editor x:Name="Detay"
+                        Text=""
+                Placeholder="Detay buraya yaziniz.."
+                FontSize="Medium"
+                TextColor="White"
+                            />
+
+                    <Label
+    FontSize="Small"
+    Text=" Tarih :"
+    HorizontalOptions="Start"
+    TextColor="White"/>
+                    <DatePicker x:Name="Tarih"  TextColor="White" BackgroundColor="#176B87" />
+
+                    <Label
+    FontSize="Small"
+    Text="Saat :"
+    HorizontalOptions="Start"
+    TextColor="White"/>
+                    <TimePicker x:Name="Saat"  TextColor="White"  BackgroundColor="#176B87" />
+
+
+                    <Button  Clicked="Save" Text="Kayd et" Background="#176B87" TextColor="White" FontSize="Medium"/>
+                    <Button  Clicked="Cancel" Text="İptal et" Background="Red" TextColor="White" FontSize="Medium"/>
+
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

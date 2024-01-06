@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="finalProject.Yapilacaklar"
+             Title="Yapilacaklar">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ekle" Order="Primary" IconImageSource="add_not.png" Clicked="YeniGorev"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="bilgiler">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        <Style TargetType="Label" x:Key="basliklar">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <CollectionView x:Name="todos" SelectionMode="Single" Margin="5">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.LeftItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Düzenle" 
+                                           BackgroundColor="Green"
+                                           IconImageSource="edit.png"
+                                           Clicked="GorevGuncelle"
+                                           CommandParameter="{Binding ID}"/>
+                            </SwipeItems>
+                        </SwipeView.LeftItems>
+
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Kaldır" 
+                                           BackgroundColor="Red"
+                                           IconImageSource="trash.png"
+                                           Clicked="Delete"
+                                           CommandParameter="{Binding ID}"/>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Frame BackgroundColor="#04364A" >
+                                <StackLayout Margin="30,30,30,30" Grid.Column="0" Spacing="10">
+                                    <Label Text="Başlık :" Style="{StaticResource basliklar}" />
+
+                                    
+                                        <StackLayout Spacing="4">
+                                        <Frame Background="#176B87">
+                                            <Label Text="{Binding Head}" Margin="10,0,10,10" Style="{StaticResource bilgiler}"/>
+                                        </Frame>
+                                    </StackLayout>
+                                
+
+                                    <Label Text="İçerik :" Style="{StaticResource basliklar}"/>
+                                 
+                                        <StackLayout>
+                                        <Frame Background="#176B87">
+                                            <Label Text="{Binding Detail}" Margin="10,0,10,10" Style="{StaticResource bilgiler}"/>
+                                        </Frame>
+                                        </StackLayout>
+
+
+
+                                    <Label Text="Tarih :" Style="{StaticResource basliklar}"/>
+
+
+                                    <StackLayout>
+                                        <Label Text="{Binding Date}" Margin="10,0,10,10" Style="{StaticResource bilgiler}"  Background="#176B87" HeightRequest="30" WidthRequest="100" VerticalOptions="Start" HorizontalOptions="Start"/>
+                                    </StackLayout>
+                                    <Label Text="Saat :" Style="{StaticResource basliklar}" />
+
+                                    <StackLayout Margin="2">
+                                        <Label Text="{Binding Hour}" Margin="10,0,10,10" Style="{StaticResource bilgiler}" Background="#176B87" HeightRequest="30" WidthRequest="100" VerticalOptions="Start" HorizontalOptions="Start"/>
+                                    </StackLayout>
+
+
+
+
+
+
+
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ScrollView>
+</ContentPage>

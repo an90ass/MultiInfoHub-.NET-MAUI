@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="finalProject.Haberler_detaylar"
+             Title="Haberler_detaylar">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="refresh.png" Order="Primary" />
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+
+        <WebView x:Name="webView" Source="{Binding haber.link}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+
+        <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="End" Margin="16">
+            <Frame x:Name="shareButtonFrame" CornerRadius="20" Padding="8" Margin="16" >
+                <ImageButton  Source="share.png" WidthRequest="30" HeightRequest="30"
+                             Aspect="AspectFill" Clicked="Paylas" />
+                
+            </Frame>
+
+            <Frame x:Name="geriButtonFrame" CornerRadius="20" Padding="8" Margin="16" 
+                   HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="back.png" WidthRequest="30" HeightRequest="30"
+                             Aspect="AspectFill" Clicked="Geri" />
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>

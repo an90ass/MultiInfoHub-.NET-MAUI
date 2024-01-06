@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="finalProject.DovizKurlari"
+             Title="Güncel Kurlar">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ekle" Order="Primary" IconImageSource="refresh.png" Clicked="Button_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="Baslik">
+            <Setter Property="TextColor" Value="Orange"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        <Style TargetType="Label" x:Key="doviz_adi">
+            <Setter Property="TextColor" Value="Red"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        <Style TargetType="Label" x:Key="doviz_alis">
+            <Setter Property="TextColor" Value="Green"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+    </ContentPage.Resources>
+    <Grid RowDefinitions="Auto,*,Auto" >
+        <Label Grid.Row="0" Text="Anlık Döviz Değerleri" Margin="20,20,20,20" TextColor="Orange" FontSize="20"/>
+
+
+        <ScrollView Grid.Row="1">
+            <StackLayout>
+                <Grid Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Döviz Türü" Style="{StaticResource Baslik}"/>
+                    <Label Grid.Column="1" Text="Alış Fiyatı" Style="{StaticResource Baslik}"/>
+                    <Label Grid.Column="2" Text="Satış Fiyatı" Style="{StaticResource Baslik}"/>
+                    <Label Grid.Column="3" Text="Fark" Style="{StaticResource Baslik}"/>
+                    <Label Grid.Column="4" Text="Güncel Durum" Style="{StaticResource Baslik}"/>
+                </Grid>
+
+                <Grid>
+                </Grid>
+
+                <CollectionView x:Name="Sepet">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="*,*,*,*,*">
+                                <Label Grid.Column="0" Text="{Binding doviz_adi}" Margin="10,10,10,10" Style="{StaticResource doviz_adi}"  />
+                                <Label  Grid.Column="1" Text="{Binding doviz_alis}" Margin="10,10,10,10" FontSize="12" Style="{StaticResource doviz_alis}"/>
+                                <Label  Grid.Column="2" Text="{Binding doviz_satis}" Margin="10,10,10,10" FontSize="12" Style="{StaticResource doviz_alis}" />
+                                <Label   Grid.Column="3" Text="{Binding Fark}" Margin="10,10,10,10" FontSize="12"/>
+                                <Image Grid.Column="4" Source="{Binding Yon}" HeightRequest="20" Margin="10,10,10,10"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

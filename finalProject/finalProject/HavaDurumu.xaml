@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="finalProject.HavaDurumu"
+             Title="Hava Durumları">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="city.png" Order="Primary" Clicked="add_sehir" />
+        <!--<ToolbarItem IconImageSource="refresh.png" Order="Primary" Clicked="add_sehir" />-->
+
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <CollectionView x:Name="Grad" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+
+                        <Grid 
+                          ColumnDefinitions="*,Auto" RowDefinitions="*,Auto"  >
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name} " FontSize="Title"  
+                            VerticalOptions="Center" Margin="20,20,20,20" />
+                            <ImageButton Grid.Row="0" Grid.Column="1" Source="cancel.png"  CommandParameter="{Binding Name}" Clicked="Sil" WidthRequest="50" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                        </Grid>
+                        <WebView Grid.Row="1" Source="{Binding Source}"  WidthRequest="249" HeightRequest="78"  Scale="1.25" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+
+
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </ScrollView>
+</ContentPage>
