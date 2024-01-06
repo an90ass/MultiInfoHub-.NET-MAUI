@@ -1,4 +1,4 @@
-# GORSEL-PROGRAMLAMA-ODEV2
+# GORSEL-PROGRAMLAMA-ODEV2 https://drive.google.com/drive/folders/1DprZE-NIQT1R7uqBIgcFl3C4VS1w6syr?usp=sharing projenin videosu
 ![1](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/40f674b8-d77d-4046-9d6b-0772db541992)
 ![2](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/5da4e86e-1699-43b8-bb43-c96bad2c2927)
 ![3](https://github.com/an90ass/GORSEL-PROGRAMLAMA-ODEV2/assets/91754070/427e6c98-0c72-4322-88d1-832559731bce)
